@@ -1,0 +1,7 @@
+#Regan 2016 Restiction Switch
+CyclinD1 *= (Myc and E2F1) or (CyclinD1 and (Myc or E2F1))
+CyclinE *= E2F1 and (not RB) and (not p27Kip1)
+E2F1 *= (not RB) and (E2F1 or Myc)
+Myc *= E2F1
+p27Kip1 *= not (CyclinD1 or CyclinE)
+RB *= (not CyclinD1) and ((not CyclinE) or p27Kip1)
