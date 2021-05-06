@@ -1,3 +1,5 @@
+#Boolean network from Sizek et al 2019 PLOS Comp Bio. Received from Herbert Sizek 2020. 
+#Sizek, H., Hamel, A., Deritei, D., Campbell, S., and Ravasz Regan, E. (2019). Boolean model of growth signaling, cell cycle and apoptosis predicts the molecular mechanism of aberrant cell cycle progression driven by hyperactive PI3K. PLoS Comput Biol 15, e1006402.
 #BOOLEAN RULES
 GF *= GF or GF_High
 RTK *= not CAD and (GF_High or GF)

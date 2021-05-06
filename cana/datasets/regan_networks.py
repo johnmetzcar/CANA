@@ -41,7 +41,8 @@ _regan_pi3k_networks = [
     'Regan2019PhaseSwitch',
     'Regan2019PI3K',
     'Regan2019PI3Kcellcycleapoptosis',
-    'Regan2019RestrictionSwitch']
+    'Regan2019RestrictionSwitch',
+    'PI3Kcellcycleapoptosis']
 
 def load_regan_PI3K_network_models(name=None):
     """Loads one of the Regan PI3K models.
@@ -65,6 +66,10 @@ def load_regan_PI3K_network_models(name=None):
         return BooleanNetwork.from_file(_path + '/regan_pi3k/' + name + '.txt', type='logical', name=name, keep_constants=True)
 
 
+def pi3kcellcycleapoptosis():
+
+    return BooleanNetwork.from_file(_path + '/regan_pi3k/' + 'PI3Kcellcycleapoptosis_from_Sizek_et_al_2019.txt', type='logical', name='PI3Kcellcycleapoptosis', keep_constants=True)
+
 def load_all_regan_pi3k_models():
     """Load all the Regan PI3K models, instanciating 10 models.
 
@@ -73,4 +78,5 @@ def load_all_regan_pi3k_models():
 
     Note: see source code for full list of models.
     """
+    print('this worked')
     return [load_regan_PI3K_network_models(name=name) for name in _regan_pi3k_networks]
